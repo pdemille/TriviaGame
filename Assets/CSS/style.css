@@ -1,0 +1,32 @@
+.jumbotron {
+    background-image: url('https://fbcover.com/covers-images/download/breaking_bad_all_becomes_crystal_clear.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+ 
+  }
+
+  .jumbotron h1 {
+    color: rgba(58, 52, 52, 0.897);
+    text-shadow: 2px 1px rgb(255, 255, 255);
+    letter-spacing: 8px;
+    font-size: 50px;
+
+  }
+  
+  .instructions {
+    text-align: center; 
+  }
+  
+  .img-thumbnail {
+      border-top: 20px;
+      margin: 40px 0px;
+      height: 200px;
+  }
+  
+
+
+
+
+
+
