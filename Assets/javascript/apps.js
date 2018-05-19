@@ -7,7 +7,7 @@ var unansweredCount = 0;
 // countdown from a minute
 var count = 60;
 
-$(document).ready(function(){
+$(document).ready(function () {
 
     //game and end screen won't show because page times out after 60 secs
     $("#mid_game_container").hide();
@@ -17,7 +17,7 @@ $(document).ready(function(){
 
 
     //transition from start screen to game
-    $("#start_button").on("click", function(){
+    $("#start_button").on("click", function () {
 
         // Hide the start screen
         $("#start_container").hide();
@@ -31,7 +31,7 @@ $(document).ready(function(){
 
 
     // Counts down and displays time
-    function countdown(){
+    function countdown() {
 
         // counting down right here
         count--;
@@ -39,31 +39,31 @@ $(document).ready(function(){
         // countdown is displayed
         $('#timer_number').html(count + " Seconds");
 
-            // click "done" before time is up
-            $("#done_button").on("click", function(){
+        // click "done" before time is up
+        $("#done_button").on("click", function () {
 
             // Stop countdown and run the timeUp function
             count = 0;
             return;
-            });
+        });
 
-            // Finish the game when timer is complete 
-            if(count == -1){
-                // Collect answers
-                timeUp();
-                // Hide the questionse
-                $("#mid_game_container").hide();
-            }
+        // Finish the game when timer is complete 
+        if (count == -1) {
+            // Collect answers
+            timeUp();
+            // Hide the questionse
+            $("#mid_game_container").hide();
+        }
     }
 
     // countdown
-    function startCountdown(){
+    function startCountdown() {
 
         setInterval(countdown, 1000);
     }
 
     // Function starts after time is up
-    function timeUp(){
+    function timeUp() {
 
         // validated values
         var Q1 = $('input:radio[name="q1"]:checked').val();
@@ -79,104 +79,104 @@ $(document).ready(function(){
 
 
         // right answers are below
-        if(Q1 == undefined){
+        if (Q1 == undefined) {
             unansweredCount++;
         }
-        else if(Q1 == "2009"){
+        else if (Q1 == "2009") {
             correctCount++;
         }
-        else{
+        else {
             wrongCount++;
         }
 
-        if(Q2 == undefined){
+        if (Q2 == undefined) {
             unansweredCount++;
         }
-        else if(Q2 == "Ethereum"){
+        else if (Q2 == "Ethereum") {
             correctCount++;
         }
-        else{
+        else {
             wrongCount++;
         }
 
-        if(Q3 == undefined){
+        if (Q3 == undefined) {
             unansweredCount++;
         }
-        else if(Q3 == "Elon Musk"){
+        else if (Q3 == "Elon Musk") {
             correctCount++;
         }
-        else{
+        else {
             wrongCount++;
         }
 
-        if(Q4 == undefined){
+        if (Q4 == undefined) {
             unansweredCount++;
         }
-        else if(Q4 == "Tron"){
+        else if (Q4 == "Tron") {
             correctCount++;
         }
-        else{
+        else {
             wrongCount++;
         }
 
-        if(Q5 == undefined){
+        if (Q5 == undefined) {
             unansweredCount++;
         }
-        else if(Q5 == "VeChain"){
+        else if (Q5 == "VeChain") {
             correctCount++;
         }
-        else{
+        else {
             wrongCount++;
         }
 
-        if(Q6 == undefined){
+        if (Q6 == undefined) {
             unansweredCount++;
         }
-        else if(Q6 == "$28,000"){
+        else if (Q6 == "$28,000") {
             correctCount++;
         }
-        else{
+        else {
             wrongCount++;
         }
 
-        if(Q7 == undefined){
+        if (Q7 == undefined) {
             unansweredCount++;
         }
-        else if(Q7 == "Satoshi Nakamoto"){
+        else if (Q7 == "Satoshi Nakamoto") {
             correctCount++;
         }
-        else{
+        else {
             wrongCount++;
         }
 
-        if(Q8 == undefined){
+        if (Q8 == undefined) {
             unansweredCount++;
         }
-        else if(Q8 == "Consensus"){
+        else if (Q8 == "Consensus") {
             correctCount++;
         }
-        else{
+        else {
             wrongCount++;
         }
 
-        if(Q9 == undefined){
+        if (Q9 == undefined) {
             unansweredCount++;
         }
-        else if(Q9 == "All of the Above"){
+        else if (Q9 == "All of the Above") {
             correctCount++;
         }
-        else{
+        else {
             wrongCount++;
         }
 
 
-        if(Q10 == undefined){
+        if (Q10 == undefined) {
             unansweredCount++;
         }
-        else if(Q10 == "35,334%"){
+        else if (Q10 == "35,334%") {
             correctCount++;
         }
-        else{
+        else {
             wrongCount++;
         }
 
