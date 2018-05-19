@@ -1,91 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+    <html>
+    <head>
+        <title>Crypto Trivia Game</title>
 
-<head>
-  <meta charset="utf-8">
-  <title>- Crystal Collector -</title>
-  <!-- Reset CSS -->
-  <link rel="stylesheet" type="text/css" href="Assets/CSS/reset.css" />
-  <!-- Latest compiled and minified CSS (Bootstrap) -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <!-- Latest compiled and minified Javascript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <!-- CSS -->
-  <link rel="stylesheet" href="Assets/CSS/style.css" />
-</head>
-<body>
-
- 
-  <div class="jumbotron text-center">
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
         
-    <h1> Crystal Collector</h1></div>
+    </head>
+    <body>
 
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-12 instructions">
-            <h2>Instructions</h2> 
-            <p>You will be given a random number at the start of the game and four crystals to choose from:</p>
+        <!-- Start -->
+        <div id = start_container>
+            <h1 class = "mainLogo">Cryptocurrency Trivia!</h1>
+            <button id = start_button>Start</button>
+        </div>
+
+        <!-- Middle -->
+        <div id = mid_game_container>
+            <h1 class = "logo">Cryptocurrency Trivia!</h1>
+
+            <!-- Timer -->
+            <h1 id = "timer_line">Time Remaining: <span id = "timer_number">60 Seconds</span></h1>
+
+            <!-- Questions -->
+            <h1>1. What year was the cryptocurrency "Bitcoin" created?</h1>
+                <input type="radio" name="q1" value="2001">2001 
+                <input type="radio" name="q1" value="2005">2005 
+                <input type="radio" name="q1" value="2009">2009 <!--answer-->
+                <input type="radio" name="q1" value="2014">2014 
+                
+                
+            <h1>2. What was the top performing altcoing of 2017?</h1>
+                <input type="radio" name="q2" value="Tron">Tron
+                <input type="radio" name="q2" value="Ethereum">Ethereum <!--answer-->
+                <input type="radio" name="q2" value="Bitcoin">Bitcoin 
+                <input type="radio" name="q2" value="Ripple">Ripple 
+
+            <h1>3. Who is not in opposition of cryptocurrency in the selection below?</h1>
+                <input type="radio" name="q3" value="Warren Buffet">Warren Buffet 
+                <input type="radio" name="q3" value="Bill Gates">Bill Gates 
+                <input type="radio" name="q3" value="Charlie Munger">Charlie Munger 
+                <input type="radio" name="q3" value="Elon Musk">Elon Musk <!--answer-->
+
+            <h1>4. Which crypto is backed by an affiliate of Alibaba?</h1>
+                <input type="radio" name="q4" value="Tron">Tron <!--answer-->
+                <input type="radio" name="q4" value="Verge">Verge 
+                <input type="radio" name="q4" value="EOS">EOS
+                <input type="radio" name="q4" value="Stellar">Stellar 
+
+            <h1>5. Out of the following cryptos, which currency is backed by BMW?</h1>
+                <input type="radio" name="q5" value="POA Network">POA Network 
+                <input type="radio" name="q5" value="Zilliqa">Zilliqa 
+                <input type="radio" name="q5" value="Cardano">Cardano 
+                <input type="radio" name="q5" value="Stellar">Stellar
+                <input type="radio" name="q5" value="VeChain">VeChain <!--answer-->
             
-            <ul>
-                <li><font  color="red">Red</font></li>
-                <li><font  color="blue">Blue</font></li>
-                <li><font  color="gold">Yellow</font></li>
-                <li><font  color="green">Green</font></li>
-            </ul>
+                
+            <h1>6. By the end of the year, what is a single Bitcoin's value predicted to be?</h1>
+                <input type="radio" name="q6" value="$102,000">$102,000 
+                <input type="radio" name="q6" value="$28,000">$28,000 <!--answer-->
+                <input type="radio" name="q6" value="$1,020,000">$1,020,000 
+                <input type="radio" name="q6" value="$19,800">$19,800
+                <input type="radio" name="q6" value="$0">$0 
+                
+
+            <h1>7. What Alias is Bitcoin's creator known by?</h1>
+                <input type="radio" name="q7" value="Satoshi Nakamoto">Satoshi Nakamoto <!--answer-->
+                <input type="radio" name="q7" value="Elon Musk">Elon Musk
+                <input type="radio" name="q7" value="Raj Rajaratnam">Raj Rajaratnam
+                <input type="radio" name="q7" value="Warren Buffet">Warren Buffet
+                <input type="radio" name="q7" value="Oracle of Omah">Oracle of Omaha
+
+            <h1>8. What is the name of the annually hosted technology summit for cryptos in New York?</h1>
+                <input type="radio" name="q8" value="CoinDesk">CoinDesk 
+                <input type="radio" name="q8" value="Coinbase">Coinbase 
+                <input type="radio" name="q8" value="Binance">Binance 
+                <input type="radio" name="q8" value="Consensus">Consensus <!--answer-->
+                <input type="radio" name="q8" value="NEM">NEM
+
+            <h1>9. What is cryptocurrency?</h1>
+                <input type="radio" name="q9" value="Digital Money">Digital Money 
+                <input type="radio" name="q9" value="An Intangible Asset">An Intangible Asset
+                <input type="radio" name="q9" value="A Store of Value">A Store of Value 
+                <input type="radio" name="q9" value="All of the Above">All of the Above <!--answer-->
+
+            <h1>10. How much did Ripple gain in value by in 2017?</h1>
+                <input type="radio" name="q10" value="35,334%">35,334% <!--answer-->
+                <input type="radio" name="q10" value="957%">957%
+                <input type="radio" name="q10" value="12,500%">12,500% 
+                <input type="radio" name="q10" value="208%">208%
+
+                <br>
+
+            <button id = done_button>Done!</button>
+
+        </div>
+
+
+
+        <!-- Ending -->
+        <div id = end_container>
+            <h1 class = "logo">Cryptocurrency Trivia!</h1>
+            <h1 id = "done">All Done!</h1>
+            <br>
+            <h1>Correct Answers: <span id = "correct_answers">0</span></h1>
+            <h1>Incorrect Answers: <span id = wrong_answers>0</span></h1>
+            <h1>Unanswered: <span id = "unanswered">0</span></h1>
+        </div>
+            
+
+
+        <!-- jQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>      
+
+        <script src="assets/javascript/apps.js"></script>
+
+        
+    </body>
     
-            <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
-            <p>You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.</p>
-            <p>The value of each crystal is hidden from you until you click on it.</p>
-            <p>Each time when the game starts, the game will change the value of the crystal.</p>
-          </div>
-        </div>
 
-        <div class="container">
-    <div class="row">
-      <div class="col-sm-9">
-        <h2>Score to match: <strong> <span id="scoreToMatch"></span></strong></h2>
-        <h2>Your total score is: <span id="totalScore"></span></h2>
-      </div>
-    <div class="col-sm-3">
-        <h2>Wins: <span id="wins"></span></h2>
-        <h2 class="text-left">Losses: <span id="losses"></span></h2>
-      </div>
-    </div>
-</div>
-
-<div class="container"> 
-      <div class="row text-center">
-        <div class="col-sm-3">
-        <img src="Assets/images/red.jpg" class="img-thumbnail red" alt="Red Crystal" width="200" height="200" />
-        </div>
-        <div class="col-sm-3">
-        <img src="Assets/images/blue.jpg" class="img-thumbnail blue" alt="Blue Crystal" width="200" height="200" />
-        </div>
-        <div class="col-sm-3">
-        <img src="Assets/images/yellow.jpg" class="img-thumbnail yellow" alt="Yellow Crystal" width="200" height="200" />
-        </div>
-        <div class="col-sm-3">
-          <img src="Assets/images/green.jpg" class="img-thumbnail green" alt="Green Crystal" width="200" height="200" />
-        </div>
-      </div>
-
- 
-      </div>
-    </div>
-    </div>
-</div>
-
-</body>
-<!-- Java -->
-<script src="Assets/javascript/game.js"></script> 
+    
 </html>
-
-
-
-
-
-
-
-
